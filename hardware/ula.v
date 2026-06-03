@@ -2,17 +2,19 @@ module ula(
     input [31:0] in1,
     input [31:0] in2,
     input [3:0] op,
-    output [31:0] result,
-    output zero_flag,
+    output reg [31:0] result,
+    output reg zero_flag
 );
 
-@always @ * begin
+always @(*) begin
+result = 32'b0;
+zero_flag = 1'b0;
 
 case (op)
     4'b0000: result = in1 + in2; // Adição
     4'b0001: result = in1 - in2; // Subtração
     4'b0010: result = in1 & in2; // AND (E)
-    4'b0011: result = int1 | in2;// OR (OU)
+    4'b0011: result = in1 | in2;// OR (OU)
     4'b0100: result = in1 ^ in2; // XOR
     4'b0101: result = ~(in1 | in2); // Nor
 
@@ -33,8 +35,9 @@ case (op)
 endcase
 
     if (result == 0) begin
-        zero_flag <= 1'b0;
+        zero_flag = 1'b1;
+    end else
+        zero_flag = 1'b0;
     end
-end
 
 endmodule
