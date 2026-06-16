@@ -1,12 +1,18 @@
+/*
+    Alunos: Matheus Aroxa, Davyson farias, Lucas Carvalho
+    AOC 2026.1
+    Descrição: Este componente é referente a ULA.
+*/
 module ula(
-    input [31:0] in1,
-    input [31:0] in2,
-    input [3:0] op,
-    output reg [31:0] result,
-    output reg zero_flag
+    input [31:0] in1, //dado vindo do primeiro registrador
+    input [31:0] in2, //dado vindo do segundo registrador
+    input [3:0] op, //4 bits que indicam a operação a ser realizada
+    output reg [31:0] result, //saida de 32 bits com o resultado da operação
+    output reg zero_flag //flag de controle, 1 quando o resultado é zero
 );
 
 always @(*) begin
+    //inicializa os valores
 result = 32'b0;
 zero_flag = 1'b0;
 

@@ -1,3 +1,9 @@
+/*
+    Alunos: Matheus Aroxa, Davyson farias, Lucas Carvalho
+    AOC 2026.1
+    Descrição: Este componente é referente as instruções passadas para a memoria de instrução
+*/
+
 //Inicializando os registradores usados
 
 00100000000100010000000000000101 //addi $s1, $zero, 5

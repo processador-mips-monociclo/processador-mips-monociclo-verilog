@@ -1,9 +1,14 @@
+/*
+    Alunos: Matheus Aroxa, Davyson farias, Lucas Carvalho
+    AOC 2026.1
+    Descrição: Este módulo é responsavel por integrar os demais componentes
+*/
 module top (
-    input wire clock,
-    input wire reset,
-    output wire [31:0] PC_out,
-    output wire [31:0] ULA_out,
-    output wire [31:0] DMem_out
+    input wire clock, //entrada de clock
+    input wire reset, //sinal para reset
+    output wire [31:0] PC_out, //saida do pc
+    output wire [31:0] ULA_out, // saida da ula
+    output wire [31:0] DMem_out //saida da memoria
 );
 
     wire [31:0] pc_atual, next_pc, pc_mais_4;
