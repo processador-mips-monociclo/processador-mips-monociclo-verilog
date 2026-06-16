@@ -1,5 +1,5 @@
 module ula_ctrl (
-    input [3:0] ALUOp
+    input [3:0] ALUOp,
     input [5:0] Funct,
     output reg [3:0] ula_OP
 );

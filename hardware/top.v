@@ -50,8 +50,8 @@ module top (
 
     pc meu_pc (
         .clock(clock),
-        .nextPC(next_pc),
-        .PC(pc_atual)
+        .nextpc(next_pc),
+        .pc(pc_atual)
     );
 
     i_mem minha_mem_instrucao (

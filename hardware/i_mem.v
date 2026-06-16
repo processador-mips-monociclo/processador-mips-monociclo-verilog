@@ -6,7 +6,7 @@ module i_mem #(parameter SIZE = 256)(
 reg [31:0] rom  [0:SIZE - 1];
 
 initial begin
-    $readmemb("instruction.list", rom);
+    $readmemb("instruction.list.v", rom);
 end
 
 assign i_out = rom[address >> 2];   
